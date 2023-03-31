@@ -1,10 +1,10 @@
-import Header from "./components/Header"
+import Example from "./components/Header"
 
 function App() {
 
   return (
     <div className="w-screen h-screen bg-red-300">
-       <Header/>
+       <Example/>
       
 
     </div>
