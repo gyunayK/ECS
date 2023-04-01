@@ -1,14 +1,12 @@
-import Example from "./components/Header"
+import Nav from "./components/Header/Nav";
 
 function App() {
-
   return (
-    <div className="w-screen h-screen bg-red-300">
-       <Example/>
-      
-
-    </div>
-  )
+    <>
+      <Nav />
+      <div className="w-screen h-screen bg-red-300"></div>
+    </>
+  );
 }
 
-export default App
+export default App;
