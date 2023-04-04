@@ -1,7 +1,6 @@
 
 import Nav_button from "../buttons/Nav_button";
 import icon from "../../assets/IMG/Patek-Philippe-Logo.png"
-import Card from "../Card/Card";
 import { useState } from "react";
 
 const Nav = () => {
@@ -17,11 +16,11 @@ const Nav = () => {
 
   return (
     <>
-      <div className="shadow-md w-full fixed top-0 left-0 " >
+      <div className="shadow-md w-full fixed top-0 left-0  z-10" >
         <div className="md:flex items-center justify-between  bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 pl-2 md:pl-7 px-7 ">
-          <div className="font-bold  flex items-center font-[Poppins] text-blue-900 sm:w-screen text-4xl ">
+          <div className="font-bold p-3 flex items-center font-[Poppins] text-blue-900 sm:w-screen text-4xl lg:text-6xl ">
             <span className="text-3x1 text-indigo-600 mr-1 pt-2">
-              <img src={icon} alt=""   className="lg:w-20 lg:h-20  sm:w-14 sm:h-14  cursor-pointer"/>
+              <img src={icon} alt="Patek"   className="lg:w-20 lg:h-20 md:block md:mr-10 md:min-h-11 md:min-w-11 lg:min-h-11 lg:min-w-11 sm:hidden cursor-pointer"/>
             </span>
             Watches & Wonders
           </div>
