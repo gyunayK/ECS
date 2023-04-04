@@ -1,6 +1,8 @@
-import React from "react";
+
 import Nav_button from "../buttons/Nav_button";
 import icon from "../../assets/IMG/Patek-Philippe-Logo.png"
+import Card from "../Card/Card";
+import { useState } from "react";
 
 const Nav = () => {
   let links = [
@@ -11,11 +13,11 @@ const Nav = () => {
     { name: "Contact", link: "/contact" },
   ];
 
-  let [open, setOpen] = React.useState(false);
+  let [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className="shadow-md w-full fixed top-0 left-0">
+      <div className="shadow-md w-full fixed top-0 left-0 " >
         <div className="md:flex items-center justify-between  bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 pl-2 md:pl-7 px-7 ">
           <div className="font-bold  flex items-center font-[Poppins] text-blue-900 sm:w-screen text-4xl ">
             <span className="text-3x1 text-indigo-600 mr-1 pt-2">
@@ -59,7 +61,7 @@ const Nav = () => {
             )}
           </div>
 
-          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-transparent-50 md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${open? 'top-10' : 'top-[-490px]'}`}>
+          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-white md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${open? 'top-10' : 'top-[-490px]'}`}>
             {links.map((link, index) => (
               <li
                 key={index}
@@ -74,9 +76,11 @@ const Nav = () => {
               </li>
             ))}
             <Nav_button>Button</Nav_button>
+
           </ul>
         </div>
       </div>
+      <Card/>
     </>
   );
 };
