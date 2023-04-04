@@ -80,7 +80,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-      <Card/>
+      
     </>
   );
 };

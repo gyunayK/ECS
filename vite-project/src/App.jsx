@@ -7,7 +7,7 @@ function App() {
       <Nav />
 
 
-    
+    <Card/>
 
 
      

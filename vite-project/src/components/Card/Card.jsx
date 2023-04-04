@@ -1,13 +1,22 @@
-import React from 'react'
-
+import React from "react";
+import { CardStyled } from "./Card.Styled";
 const Card = () => {
-    return (
-      <div className='z-10 relative' >
-        Card
-        <h1> Hello</h1>
-      </div>
-    )
-  }
-  
+  return (
+    <div className="mt-32">
+      <CardStyled>
+        <div className="card-body">
+          <h1 className="card-title"> Rolex Submariner</h1>
+          <img
+            className="card-img-top"
+            src="https://raffijewellers.com/wp-content/themes/raffi/rolex/assets/thumbnails/front_facing/M116500LN-0002.png"
+          ></img>
+          <p className="card-text">Date</p>
 
-export default Card
+          <button className="btn"> Select</button>
+        </div>
+      </CardStyled>
+    </div>
+  );
+};
+
+export default Card;
