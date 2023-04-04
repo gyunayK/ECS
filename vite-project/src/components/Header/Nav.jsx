@@ -17,9 +17,9 @@ const Nav = () => {
   return (
     <>
       <div className="shadow-md w-full fixed top-0 left-0  z-10" >
-        <div className="md:flex items-center justify-between  bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 pl-2 md:pl-7 px-7 ">
-          <div className="font-bold p-3 flex items-center font-[Poppins] text-blue-900 sm:w-screen text-4xl lg:text-6xl ">
-            <span className="text-3x1 text-indigo-600 mr-1 pt-2">
+        <div className="md:flex items-center justify-between  bg-[#2a9d8f] pl-2 md:pl-7 px-7 ">
+          <div className="font-bold p-3 flex items-center font-[Poppins] text-[#e9c46a] sm:w-screen text-4xl lg:text-6xl ">
+            <span className="text-3x1 mr-1 pt-2">
               <img src={icon} alt="Patek"   className="lg:w-20 lg:h-20 md:block md:mr-10 md:min-h-11 md:min-w-11 lg:min-h-11 lg:min-w-11 sm:hidden cursor-pointer"/>
             </span>
             Watches & Wonders
@@ -60,11 +60,11 @@ const Nav = () => {
             )}
           </div>
 
-          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-white md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${open? 'top-10' : 'top-[-490px]'}`}>
+          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#1a8b8f] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${open? 'top-10' : 'top-[-490px]'}`}>
             {links.map((link, index) => (
               <li
                 key={index}
-                className="text-dark md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   "
+                className="text-[#e9c46a] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   "
               >
                 <a
                   href={link.link}
