@@ -44,6 +44,7 @@ export const CardStyled = styled.div`
     font-weight: 700;
     padding: 0.75rem 1.5rem;
     border-radius: 2rem;
+    border: 2px solid #e9c46a;
   }
   .btn:hover {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);

@@ -1,6 +1,5 @@
-
 import Nav_button from "../buttons/Nav_button";
-import icon from "../../assets/IMG/Patek-Philippe-Logo.png"
+import icon from "../../assets/IMG/Patek-Philippe-Logo.png";
 import { useState } from "react";
 
 const Nav = () => {
@@ -16,13 +15,17 @@ const Nav = () => {
 
   return (
     <>
-      <div className="shadow-md w-full fixed top-0 left-0  z-10" >
+      <div className="shadow-md w-full fixed top-0 left-0  z-10">
         <div className="md:flex items-center justify-between  bg-[#2a9d8f] pl-2 md:pl-7 px-7 ">
-          <div className="font-bold p-3 flex items-center font-[Poppins] text-[#e9c46a] sm:w-screen text-4xl lg:text-6xl ">
+          <div className="font-bold p-3 flex items-center font-[Poppins] text-[#e9c46a] sm:w-screen text-4xl lg:text-4xl ">
             <span className="text-3x1 mr-1 pt-2">
-              <img src={icon} alt="Patek"   className="lg:w-20 lg:h-20 md:block md:mr-10 md:min-h-11 md:min-w-11 lg:min-h-11 lg:min-w-11 sm:hidden cursor-pointer"/>
+              <img
+                src={icon}
+                alt="Patek"
+                className="lg:w-20 lg:h-20 md:block md:mr-10 md:min-h-11 md:min-w-11 lg:min-h-11 lg:min-w-11 sm:hidden cursor-pointer"
+              />
             </span>
-            Watches & Wonders
+            <h1>Watches & Wonders</h1>
           </div>
           <div className="text-3xl absolute right-8 top-4 cursor-pointer md:hidden">
             {open ? (
@@ -60,7 +63,11 @@ const Nav = () => {
             )}
           </div>
 
-          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#1a8b8f] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${open? 'top-10' : 'top-[-490px]'}`}>
+          <ul
+            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#1a8b8f] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${
+              open ? "top-10" : "top-[-490px]"
+            }`}
+          >
             {links.map((link, index) => (
               <li
                 key={index}
@@ -75,11 +82,9 @@ const Nav = () => {
               </li>
             ))}
             <Nav_button>Button</Nav_button>
-
           </ul>
         </div>
       </div>
-      
     </>
   );
 };
