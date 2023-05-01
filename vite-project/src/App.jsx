@@ -1,16 +1,27 @@
-import Card from "./components/Card/Card";
-import WatchData from "./components/Data/WatchData";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/Header/Nav";
-import "./App.css"
+import "./App.css";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "@/Redux/middleware/api";
+import Home from "./pages/Home";
+
 
 function App() {
-  
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
   return (
     <>
-      <Nav />
-      <div className=" w-screen h-auto p-2">
-      <WatchData/>
-      </div>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
