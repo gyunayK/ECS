@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CardStyled, LoadingGIF } from "./Card.Styled";
 import loading from "@/assets/IMG/loading.gif";
 
-const Card = ({ data, search }) => {
+const Card = ({ data, search, handleAddToCart }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   // useEffect(() => {
@@ -19,7 +19,7 @@ const Card = ({ data, search }) => {
   return (
     <>
       {isLoading ? (
-        <LoadingGIF  className="mt-32" />
+        <LoadingGIF className="mt-32" />
       ) : (
         <>
           <CardStyled key={data.id}>
@@ -38,7 +38,12 @@ const Card = ({ data, search }) => {
                 src={data.image}
               ></img>
               <p className="card-text">Date</p>
-              <button className="btn"> ADD TO CART</button>
+              <button
+                className="btn"
+                onClick={() =>
+                  handleAddToCart(data.id, data.title, data.price, data.image)
+                }
+              >Add to Cart</button>
             </div>
           </CardStyled>
         </>

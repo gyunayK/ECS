@@ -56,7 +56,6 @@ const Nav = () => {
               </svg>
             )}
           </div>
-          <Cart />
 
           <ul
             className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#22598f] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-out ${
@@ -76,8 +75,10 @@ const Nav = () => {
                 </a>
               </li>
             ))}
+            <span>
+              <Cart />
+            </span>
             {/* <Nav_button>Button</Nav_button> */}
-           
           </ul>
         </div>
       </div>
