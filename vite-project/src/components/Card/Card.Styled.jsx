@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const CardStyled = styled.div`
   width:20rem;
-  background-color: #2a9d8f;
+  background-color: #457b9d;
   margin: 0 auto;
   margin-top: 2rem;
   padding: 0.8rem;
-  color: #e9c46a;
+  color: #f1faee;
   position: relative;
   border: none;
   border-radius: 1rem;
@@ -44,10 +44,13 @@ export const CardStyled = styled.div`
     font-weight: 700;
     padding: 0.75rem 1.5rem;
     border-radius: 2rem;
-    border: 2px solid #e9c46a;
+    border: 2px solid #a8dadc;
   }
   .btn:hover {
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    background-color: #a8dadc;
+    color: #1d3557;
+    border: 2px solid #1d3557;
+    
   }
 `;
 
@@ -56,4 +59,6 @@ export const LoadingGIF= styled.img`
   height: auto;
   margin: 0 auto;
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
 `;

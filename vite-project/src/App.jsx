@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProducts } from "@/Redux/middleware/api";
 import Home from "./pages/Home";
-
+import Footer from '@/components/footer/Footer'
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+
+        <Footer />
       </BrowserRouter>
     </>
   );

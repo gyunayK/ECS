@@ -33,17 +33,14 @@ const cartSlice = createSlice({
             }
           },
         removeFromCart: (state, action) => {
-            const product = action.payload;
-            const productInCartIndex = state.cart.findIndex(item => item.id === product.id);
-
-            if (productInCartIndex !== -1) {
-                if (state.cart[productInCartIndex].quantity === 1) {
-                    state.cart.splice(productInCartIndex, 1);
-                } else {
-                    state.cart[productInCartIndex].quantity--;
-                }
-                state.total.price -= product.price;
+            const { id, price, quantity } = action.payload;
+            const existingItem = state.cart.find(item => item.id === id);
+            if (existingItem.quantity === 1) {
+                state.cart = state.cart.filter(item => item.id !== id);
+            } else {
+                existingItem.quantity--;
             }
+            state.total.price -= price;
         },
         clearCart: (state, action) => {
             state.cart = [];

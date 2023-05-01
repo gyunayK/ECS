@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { CardStyled, LoadingGIF } from "./Card.Styled";
-import loading from "@/assets/IMG/loading.gif";
+import loading from "@/assets/loading.gif";
 
 const Card = ({ data, search, handleAddToCart }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  // useEffect(() => {
-  //   if (!search) return;
-  //   setIsLoading(true);
-  // }, [search]);
-
-  // useEffect(() => {
-  //   if (data && data.length > 0) {
-  //     setIsLoading(false);
-  //   }
-  // }, [data]);
 
   return (
     <>
       {isLoading ? (
-        <LoadingGIF className="mt-32" />
+        <LoadingGIF className="mt-32" src={loading} />
       ) : (
         <>
           <CardStyled key={data.id}>
             <div className="card-body">
-              <p className="bg-blue-400 rounded-lg text-white font-bold px-2 py-1 text-xs uppercase tracking-widest price">
+              <p className="bg-[#589799] rounded-lg text-white font-bold px-2 py-1 text-xs uppercase tracking-widest price">
                 ${data.price}
               </p>
 
