@@ -10,7 +10,7 @@ import { removeFromCart } from "@/Redux/Slice/cartSlice";
 function Cart() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
+  
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
