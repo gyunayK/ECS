@@ -14,7 +14,7 @@ const Card = ({ data, search, handleAddToCart }) => {
         <>
           <CardStyled key={data.id}>
             <div className="card-body">
-              <p className="bg-[#589799] rounded-lg text-white font-bold px-2 py-1 text-xs uppercase tracking-widest price">
+              <p className="bg-[#000000] rounded-lg text-white font-bold px-2 py-1 text-l uppercase tracking-widest price">
                 ${data.price}
               </p>
 
@@ -27,7 +27,7 @@ const Card = ({ data, search, handleAddToCart }) => {
                 className="sm:object-cover sm:h-60 sm:w-full card-img-top md:object-cover md:h-80 md:w-full"
                 src={data.image}
               ></img>
-              <p className="card-text">Date</p>
+              <p className="card-text">Rating: {data.rating.rate}</p>
               <button
                 className="btn"
                 onClick={() =>

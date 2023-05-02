@@ -1,13 +1,12 @@
-import React from 'react'
-import "./CartButtonStyle.css"
+import React from "react";
+import "./CartButtonStyle.css";
 
-function CartButton({children}) {
+function CartButton({ children }) {
   return (
     <>
-     <button className="button-36 mt-2">{children}</button>
+      <button className="button-36">{children}</button>
     </>
-  )
+  );
 }
 
-export default CartButton
-
+export default CartButton;

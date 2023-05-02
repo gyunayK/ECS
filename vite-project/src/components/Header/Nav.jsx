@@ -17,8 +17,8 @@ const Nav = () => {
   return (
     <>
       <div className="shadow-md w-full fixed top-0 left-0  z-10">
-        <div className="md:flex items-center justify-between  bg-[#3e7cb1] pl-2 md:pl-7 px-7 ">
-          <div className="font-bold p-3 flex items-center font-[Poppins] text-[#f7f7fc] sm:w-screen text-4xl lg:text-4xl ">
+        <div className="md:flex items-center justify-between  bg-[#fff] pl-2 md:pl-7 px-7 ">
+          <div className="font-bold p-3 flex items-center font-[Poppins] text-[#030303] sm:w-screen text-4xl lg:text-4xl ">
             <h1 className="cursor-pointer">ECS</h1>
           </div>
           <div className="text-3xl absolute right-8 top-4 cursor-pointer md:hidden">
@@ -58,18 +58,18 @@ const Nav = () => {
           </div>
 
           <ul
-            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#22598f] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 xl:mr pl-9 pr-9 transition-all duration-500 ease-out ${
+            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#e9eff7] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 xl:mr pl-9 pr-9 transition-all duration-500 ease-out ${
               open ? "top-10" : "top-[-490px]"
             }`}
           >
             {links.map((link, index) => (
               <li
                 key={index}
-                className="text-[#f7f7fc] 	 md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   "
+                className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   "
               >
                 <a
                   href={link.link}
-                  className="px-4 py-2 border-b-4 border-transparent hover:border-indigo-50 duration-50  ease-linear sm:items-center "
+                  className="px-4 py-2 border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear sm:items-center "
                 >
                   {link.name}
                 </a>

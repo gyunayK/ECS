@@ -6,10 +6,10 @@ import { addToCart } from "@/Redux/Slice/cartSlice";
 function CardWrapper() {
   const dispatch = useDispatch();
   const productsData = useSelector((state) => state.store.products.data);
-  // console.log(productsData);
+   console.log(productsData);
 
   const handleAddToCart = (id, name, price, image) => {
-    console.log(id, name, price, image);
+    // console.log(id, name, price, image);
     dispatch(addToCart({id, name, price, image}));
   };
 
