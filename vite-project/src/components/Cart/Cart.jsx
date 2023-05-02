@@ -9,14 +9,13 @@ import { removeFromCart } from "@/Redux/Slice/cartSlice";
 
 function Cart() {
   const dispatch = useDispatch();
+  const [showMenu, setShowMenu] = useState(false);
   const cart = useSelector((state) => state.cart);
   
-  const [showMenu, setShowMenu] = useState(false);
-
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
+  
   const handleRemoveItem = (id, price, quantity) => {
     dispatch(removeFromCart({ id, price, quantity }));
   };
@@ -78,7 +77,7 @@ function Cart() {
             <CartButton>Check out</CartButton>
           </div>
         </div>
-        <button className="cart-button md:mr-[10%]" onClick={toggleMenu}>
+        <button className="cart-button" onClick={toggleMenu}>
           {!showMenu ? (
             <FaCartArrowDown className="icon" />
           ) : (

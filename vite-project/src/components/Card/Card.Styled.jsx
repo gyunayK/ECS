@@ -23,9 +23,9 @@ export const CardStyled = styled.div`
   }
 
   .btn {
-    /* visibility: hidden;
+    visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s; */
+    transition: visibility 0s, opacity 0.5s;
 
     font-size: 1rem;
     font-weight: 700;
