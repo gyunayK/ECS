@@ -27,7 +27,7 @@ function Cart() {
         <div
           className={`hamburger-menu ${
             showMenu ? "show" : ""
-          } sm:mt-14 md:mt-0 sm:-right-[800px] md:-right-[1024px] lg:-right-[1280px] lg:w-[400px] sm:w-screen sm:h-h-screen`} //hamburger menu pop up
+          } sm:mt-14 md:mt-0 sm:-right-[800px] md:-right-[1024px] md:w-[400px]  lg:-right-[1280px] lg:w-[400px] sm:w-screen sm:h-h-screen`} //hamburger menu pop up
         >
           <div className="cart-header-wrapper m-5">
             <h1 className="title">Shopping Cart</h1>
