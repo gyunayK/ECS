@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import { supabase } from "@/lib/supabaseClient";
-import { setUser } from "@/redux/Slice/userSlice";
+import { setUser } from "@/Redux/Slice/userSlice";
 
 function LogIn() {
   const emailRef = useRef();
