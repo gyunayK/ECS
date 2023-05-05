@@ -3,11 +3,13 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { rootReducer } from "./Slice/index";
 import thunk from "redux-thunk";
+import logger from "redux-logger";
 
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
 
 const middleware = [thunk];
+
 
 const persistConfig = {
   key: "root",
