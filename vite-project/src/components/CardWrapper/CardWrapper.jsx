@@ -6,6 +6,8 @@ import { addToCart } from "@/Redux/Slice/cartSlice";
 function CardWrapper() {
   const dispatch = useDispatch();
   const productsData = useSelector((state) => state.store.products.data);
+  const user = useSelector((state) => state);
+  console.log(user);
 
   const handleAddToCart = (id, name, price, image) => {
     dispatch(addToCart({ id, name, price, image }));

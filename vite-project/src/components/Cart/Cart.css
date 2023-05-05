@@ -26,6 +26,12 @@
   right: 70%;
 }
 
+.cart-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
 @media only screen and (max-width: 767px) {
   .cart-button {
     position: fixed;
@@ -127,9 +133,16 @@
   align-items: center;
   position: relative;
   top: 300px;
-
   font-size: 2rem;
 }
+
+@media only screen and (max-width: 767px) {
+  .empty-cart {
+    align-self: baseline;
+    top: 200px;
+  }
+}
+
 
 .cart-item img {
   width: 100px;

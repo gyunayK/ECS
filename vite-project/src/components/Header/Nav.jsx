@@ -1,7 +1,7 @@
-import Nav_button from "../buttons/Nav_button";
-import icon from "../../assets/Patek-Philippe-Logo.png";
 import { useState } from "react";
 import Cart from "../Cart/Cart";
+import { FaUser } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
   let links = [
@@ -75,10 +75,17 @@ const Nav = () => {
                 </a>
               </li>
             ))}
-            <span>
+            <li className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
+              <Link
+                to="/login"
+                className="px-4 py-2 border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear sm:items-center"
+              >
+                <FaUser />
+              </Link>
+            </li>
+            <li>
               <Cart />
-            </span>
-            {/* <Nav_button>Button</Nav_button> */}
+            </li>
           </ul>
         </div>
       </div>
