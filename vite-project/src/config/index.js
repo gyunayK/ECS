@@ -3,4 +3,5 @@ const config = {
     supabaseKey: import.meta.env.VITE_SUPABASE_KEY
 }
 
+
 export default config
