@@ -1,9 +1,9 @@
 import React from 'react'
 
-function userData() {
+function UserData() {
   return (
-    <div>userData</div>
+    <div>UserData</div>
   )
 }
 
-export default userData
+export default UserData

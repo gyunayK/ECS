@@ -8,7 +8,7 @@ import Footer from "@/components/footer/Footer";
 import Home from "@/pages/Home";
 import LogIn from "../pages/LogIn";
 import Register from "../pages/Register";
-import UserData from "../components/userData/userData";
+import UserData from "../components/userData/UserData";
 
 
 import { fetchProducts } from "@/Redux/middleware/api";
