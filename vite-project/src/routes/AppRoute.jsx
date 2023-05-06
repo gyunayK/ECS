@@ -15,11 +15,12 @@ import Footer from "@/components/footer/Footer";
 import Home from "@/pages/Home";
 import LogIn from "../pages/LogIn";
 import Register from "../pages/Register";
-import ProfilePage from "@/pages/ProfilePage";
+import ProfilePageUpdate from "@/pages/ProfilePageUpdate";
 
 import { fetchProducts } from "@/Redux/middleware/api";
 
 import "@/App.css";
+import UserAccountUpdate from "../pages/UserAccountUpdate";
 
 const PrivateRoute = ({ user }) => {
   if (user) {
@@ -59,7 +60,8 @@ function AppRoute() {
           </Route>
 
           <Route element={<ProfileRoute user={user} />}>
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profileUpdate" element={<ProfilePageUpdate />} />
+            <Route path="/userUpdate" element={<UserAccountUpdate />} />
           </Route>
         </Routes>
        <Footer />

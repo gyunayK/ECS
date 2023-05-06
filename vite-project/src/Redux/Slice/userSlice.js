@@ -13,11 +13,14 @@ const userSlice = createSlice({
         setUser: (state, action) => {
             state.user = action.payload
         },
+        updateUserProfile: (state, action) => {
+            state.user.user_metadata = action.payload
+        },
         unSetUser: (state) => {
             state.user = null
         }
     }
 })
 
-export const { setUser, unSetUser } = userSlice.actions
+export const { setUser, unSetUser, updateUserProfile } = userSlice.actions
 export default userSlice.reducer
