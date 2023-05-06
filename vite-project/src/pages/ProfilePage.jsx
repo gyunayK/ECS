@@ -1,13 +1,54 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { supabase } from "@/lib/supabaseClient";
 
 function ProfilePage() {
+  const user2 = useSelector((state) => state.user.id);
+
+
+  const getUserData = async () => {
+    const data = await supabase.auth.getUser();
+    console.log(data);
+
+
+  }
+
+  
+  
+  const updateUserData = async () => {
+    const { data, error } = await supabase.auth.updateUser({
+      user_metadata: {
+        FirstName: "John",
+        LastName: "Doe",
+        address: "123 Main St",
+        City: "Anytown",
+        PostalCode: "12345",
+        Country: "USA",
+        Phone: "123-456-7890",
+      },
+    });
+    
+    updateUserData()
+
+
+    if (error) {
+      console.log(error);
+      return;
+    }
+
+  };
+
+
+
+
   return (
     <div className="mt-20">
       <h1 className="text-3xl text-center">Profile Page</h1>
+      <button onClick={getUserData}>GetUserData</button>
 
       <div className="flex justify-center">
         <div className="w-1/2">
-          <div className="flex justify-between">
+          <div className="flex justify-between max-w-[700px] ">
             <div className="w-1/2 mr-5">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -116,6 +157,7 @@ function ProfilePage() {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 type="text"
+                defaultValue={"user.email"}
                 placeholder="Email"
               />
 

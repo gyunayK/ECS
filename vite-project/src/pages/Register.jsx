@@ -21,6 +21,19 @@ function Register() {
     } = await supabase.auth.signUp({
       email: emailRef.current.value,
       password: passwordRef.current.value,
+
+      options:{
+        data:{
+          UserName: "",
+          FirstName: "",
+          LastName: "",
+          address: "",
+          City: "",
+          PostalCode: "",
+          Country: "",
+          Phone: "",
+        }
+      }
     });
 
     if (error) {

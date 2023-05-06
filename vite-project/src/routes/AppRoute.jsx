@@ -41,7 +41,6 @@ function AppRoute() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
 
-  const shouldShowFooter = !["/Login", "/Register"].includes(location.pathname);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -63,7 +62,7 @@ function AppRoute() {
             <Route path="/profile" element={<ProfilePage />} />
           </Route>
         </Routes>
-        {shouldShowFooter && <Footer />}
+       <Footer />
       </BrowserRouter>
     </>
   );

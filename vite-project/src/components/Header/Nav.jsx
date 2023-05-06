@@ -2,6 +2,10 @@ import { useState } from "react";
 import Cart from "../Cart/Cart";
 import { FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { unSetUser } from "@/Redux/Slice/userSlice";
+import { supabase } from "@/lib/supabaseClient";
+import { toast } from "react-toastify";
 
 const Nav = () => {
   let links = [
@@ -11,6 +15,24 @@ const Nav = () => {
     { name: "About", link: "/#" },
     { name: "Contact", link: "/#" },
   ];
+
+  // const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+
+  const handleLogout = async () => {
+    const data = await supabase.auth.signOut();
+    if (data.error) {
+      toast.error(error.message);
+      return;
+    }
+    dispatch(unSetUser());
+    toast.success("Logout successful");
+    // navigate("/");
+  };
+
+
+
 
   let [open, setOpen] = useState(false);
 
@@ -75,9 +97,14 @@ const Nav = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <button onClick={handleLogout}>
+                Logout
+              </button>
+            </li>
             <li className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
               <Link
-                to="/login"
+                to="/profile"
                 className="px-4 py-2 border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear sm:items-center"
               >
                 <FaUser />
@@ -86,6 +113,7 @@ const Nav = () => {
             <li>
               <Cart />
             </li>
+            
           </ul>
         </div>
       </div>

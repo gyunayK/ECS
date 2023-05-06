@@ -17,6 +17,7 @@ function LogIn() {
     console.log(emailRef.current.value);
     console.log(passwordRef.current.value);
 
+   
     const {
       data: { user },
       error,
@@ -24,6 +25,8 @@ function LogIn() {
       email: emailRef.current.value,
       password: passwordRef.current.value,
     });
+    
+   
 
     if (error) {
       toast.error(error.message);
