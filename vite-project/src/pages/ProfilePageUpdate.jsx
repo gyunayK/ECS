@@ -39,6 +39,7 @@ function ProfilePageUpdate() {
         City: cityRef.current.value,
         PostalCode: postalCodeRef.current.value,
         Country: countryRef.current.value,
+        Phone: phoneRef.current.value,
       })
     );
   };
@@ -54,7 +55,6 @@ function ProfilePageUpdate() {
         City: cityRef.current.value,
         PostalCode: postalCodeRef.current.value,
         Country: countryRef.current.value,
-        
       },
     });
 
@@ -77,10 +77,7 @@ function ProfilePageUpdate() {
         <div className="w-1/2">
           <div className="flex justify-between max-w-[700px] ">
             <div className="w-1/2 mr-5">
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2"
-                htmlFor="firstName"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2">
                 First Name
               </label>
               <input
@@ -92,10 +89,7 @@ function ProfilePageUpdate() {
                 defaultValue={user_metadata.FirstName}
               />
 
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4"
-                htmlFor="lastName"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4">
                 Last Name
               </label>
               <input
@@ -106,10 +100,7 @@ function ProfilePageUpdate() {
                 placeholder="Last Name"
                 defaultValue={user_metadata.LastName}
               />
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4"
-                htmlFor="phone"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4">
                 Phone
               </label>
               <input
@@ -117,14 +108,11 @@ function ProfilePageUpdate() {
                 id="phone"
                 type="text"
                 ref={phoneRef}
-                defaultValue={user_metadata.phone}
+                defaultValue={user_metadata.Phone}
                 placeholder="Phone"
               />
 
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4"
-                htmlFor="address"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4">
                 Address
               </label>
               <input
@@ -136,10 +124,7 @@ function ProfilePageUpdate() {
                 defaultValue={user_metadata.address}
               />
 
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4"
-                htmlFor="city"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4">
                 City
               </label>
               <input
@@ -151,10 +136,7 @@ function ProfilePageUpdate() {
                 defaultValue={user_metadata.City}
               />
 
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4"
-                htmlFor="postalCode"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4">
                 Postal Code
               </label>
               <input
@@ -165,10 +147,7 @@ function ProfilePageUpdate() {
                 placeholder="Postal Code"
                 defaultValue={user_metadata.PostalCode}
               />
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2"
-                htmlFor="username"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2">
                 Username
               </label>
               <input
@@ -180,10 +159,7 @@ function ProfilePageUpdate() {
                 defaultValue={user_metadata.UserName}
               />
 
-              <label
-                className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4"
-                htmlFor="country"
-              >
+              <label className="block text-gray-700 md:text-lg sm:text-2xl   mb-2 mt-4">
                 Country
               </label>
               <select

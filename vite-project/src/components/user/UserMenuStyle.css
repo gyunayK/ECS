@@ -2,22 +2,21 @@
   position: fixed;
   top: -50%;
   width: 200px;
+  right: 0;
   z-index: -1;
-  height: 15%;
+  height: 20%;
   background-color: #e4e6eb;
   transition: all 0.3s ease-in-out;
 }
 
 .user-menu.show {
-  top: 6%;
+  top: 8%;
 }
 
 .user-menu__icon {
   font-size: 30px;
   cursor: pointer;
- 
-  z-index: 1;
-  /* right: 70%; */
+  transition: all 0.3s ease-in-out;
 }
 
 .user-menu__icon:hover {

@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { unSetUser } from "@/Redux/Slice/userSlice";
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "react-toastify";
-import UserMenu from "@/components/user/userMenu";
+import UserMenu from "@/components/user/UserMenu";
 
 const Nav = () => {
   let links = [
@@ -96,17 +96,10 @@ const Nav = () => {
                 </a>
               </li>
             ))}
-            <li className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
+            <li className="text-[#000000] mr-4 md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
               <UserMenu />
             </li>
-            <li className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
-              <Link
-                to="/profileUpdate"
-                className="px-4 py-2 border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear sm:items-center"
-              >
-                <FaUser />
-              </Link>
-            </li>
+
             <li>
               <Cart />
             </li>
