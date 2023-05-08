@@ -21,7 +21,7 @@ import { fetchProducts } from "@/Redux/middleware/api";
 
 import "@/App.css";
 import UserAccountUpdate from "@/pages/UserAccountUpdate";
-import UserMenu from "@/components/user/userMenu";
+import UserMenu from "@/components/user/UserMenu";
 
 const PrivateRoute = ({ user }) => {
   if (user) {
