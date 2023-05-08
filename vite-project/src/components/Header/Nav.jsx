@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { unSetUser } from "@/Redux/Slice/userSlice";
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "react-toastify";
+import UserMenu from "@/components/user/userMenu";
 
 const Nav = () => {
   let links = [
@@ -16,9 +17,10 @@ const Nav = () => {
     { name: "Contact", link: "/#" },
   ];
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   // const navigate = useNavigate();
   const dispatch = useDispatch();
-
 
   const handleLogout = async () => {
     const data = await supabase.auth.signOut();
@@ -30,9 +32,6 @@ const Nav = () => {
     toast.success("Logout successful");
     // navigate("/");
   };
-
-
-
 
   let [open, setOpen] = useState(false);
 
@@ -97,10 +96,8 @@ const Nav = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <button onClick={handleLogout}>
-                Logout
-              </button>
+            <li className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
+              <UserMenu />
             </li>
             <li className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
               <Link
@@ -113,7 +110,6 @@ const Nav = () => {
             <li>
               <Cart />
             </li>
-            
           </ul>
         </div>
       </div>

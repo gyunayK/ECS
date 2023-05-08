@@ -13,14 +13,15 @@ import Nav from "@/components/Header/Nav";
 import Footer from "@/components/footer/Footer";
 
 import Home from "@/pages/Home";
-import LogIn from "../pages/LogIn";
-import Register from "../pages/Register";
+import LogIn from "@/pages/LogIn";
+import Register from "@/pages/Register";
 import ProfilePageUpdate from "@/pages/ProfilePageUpdate";
 
 import { fetchProducts } from "@/Redux/middleware/api";
 
 import "@/App.css";
-import UserAccountUpdate from "../pages/UserAccountUpdate";
+import UserAccountUpdate from "@/pages/UserAccountUpdate";
+import UserMenu from "@/components/user/userMenu";
 
 const PrivateRoute = ({ user }) => {
   if (user) {
@@ -53,6 +54,7 @@ function AppRoute() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/UserMenu" element={<UserMenu />} />
 
           <Route element={<PrivateRoute user={user} />}>
             <Route path="/login" element={<LogIn />} />
