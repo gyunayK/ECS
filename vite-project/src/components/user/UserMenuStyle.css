@@ -4,13 +4,14 @@
   width: 200px;
   right: 0;
   z-index: -1;
-  height: 20%;
+  height: 16.5%;
   background-color: #e4e6eb;
   transition: all 0.3s ease-in-out;
+  padding-top: 20px;
 }
 
 .user-menu.show {
-  top: 8%;
+  top: 5%;
 }
 
 .user-menu__icon {
