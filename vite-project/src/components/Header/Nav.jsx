@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import UserMenu from "@/components/user/UserMenu";
 
 const Nav = () => {
+  const navigate = useNavigate();
   let links = [
     { name: "Home", link: "/" },
     { name: "Shop", link: "/#" },
@@ -17,21 +18,6 @@ const Nav = () => {
     { name: "Contact", link: "/#" },
   ];
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // const navigate = useNavigate();
-  const dispatch = useDispatch();
-
-  const handleLogout = async () => {
-    const data = await supabase.auth.signOut();
-    if (data.error) {
-      toast.error(error.message);
-      return;
-    }
-    dispatch(unSetUser());
-    toast.success("Logout successful");
-    // navigate("/");
-  };
 
   let [open, setOpen] = useState(false);
 
@@ -40,7 +26,7 @@ const Nav = () => {
       <div className="shadow-md w-full fixed top-0 left-0  z-10">
         <div className="md:flex items-center justify-between  bg-[#fff] pl-2 md:pl-7 px-7 ">
           <div className="font-bold p-3 flex items-center font-[Poppins] text-[#030303] sm:w-screen text-4xl lg:text-4xl ">
-            <h1 className="cursor-pointer">ECS</h1>
+            <h1 className="cursor-pointer" onClick={() => navigate("/")}>ECS</h1>
           </div>
           <div className="text-3xl absolute right-8 top-4 cursor-pointer md:hidden">
             {open ? (

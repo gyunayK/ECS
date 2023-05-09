@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 
-import { useSelector, useDispatch } from "react-redux";
 import { updateUserProfile } from "@/Redux/Slice/userSlice";
-
+import { toast } from "react-toastify";
+import { useSelector, useDispatch } from "react-redux";
 import { supabase } from "@/lib/supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 function ProfilePageUpdate() {
+  const navigate = useNavigate();
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const addressRef = useRef();
@@ -62,7 +64,9 @@ function ProfilePageUpdate() {
       console.log(error);
       return;
     } else {
+      toast.success("Profile Updated");
       updateProfileState();
+      navigate("/profile");
     }
   };
 
@@ -95,6 +99,19 @@ function ProfilePageUpdate() {
               type="text"
               placeholder="Last Name"
               defaultValue={user_metadata.LastName}
+            />
+          </div>
+          <div className="mb-4 sm:px-3  ">
+            <label className="block text-gray-700 md:text-lg sm:text-2xl xs:text-2xl   mb-2">
+              Username
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              ref={usernameRef}
+              type="text"
+              placeholder="Username"
+              defaultValue={user_metadata.UserName}
             />
           </div>
           <div className="mb-4 sm:px-3  ">
@@ -151,26 +168,13 @@ function ProfilePageUpdate() {
               defaultValue={user_metadata.PostalCode}
             />
           </div>
-          <div className="mb-4 sm:px-3  ">
-            <label className="block text-gray-700 md:text-lg sm:text-2xl xs:text-2xl   mb-2">
-              Username
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
-              ref={usernameRef}
-              type="text"
-              placeholder="Username"
-              defaultValue={user_metadata.UserName}
-            />
-          </div>
 
           <div className="mb-4 sm:px-3  ">
             <label className="block text-gray-700 md:text-lg sm:text-2xl xs:text-2xl   mb-2 ">
               Country
             </label>
             <select
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:shadow-outline"
               id="country"
               ref={countryRef}
               name="country"
@@ -186,7 +190,7 @@ function ProfilePageUpdate() {
         </div>
       </div>
       <button
-        className="bg-blue-500 sm:w-[80%] sm:ml-[10%] md:mx-[37%] md:max-w-[25%] hover:bg-blue-700  text-white py-3 px-4 rounded focus:outline-none focus:shadow-outline "
+        className="bg-blue-500 sm:mb-10 sm:w-[80%] sm:ml-[10%] md:mx-[37%] md:max-w-[25%] hover:bg-blue-700  text-white py-3 px-4 rounded focus:outline-none focus:shadow-outline "
         type="button"
         onClick={updateUserData}
       >

@@ -16,6 +16,7 @@ import Home from "@/pages/Home";
 import LogIn from "@/pages/LogIn";
 import Register from "@/pages/Register";
 import ProfilePageUpdate from "@/pages/ProfilePageUpdate";
+import ProfilePage from "@/pages/ProfilePage";
 
 import { fetchProducts } from "@/Redux/middleware/api";
 
@@ -63,10 +64,12 @@ function AppRoute() {
 
           <Route element={<ProfileRoute user={user} />}>
             <Route path="/profileUpdate" element={<ProfilePageUpdate />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/userUpdate" element={<UserAccountUpdate />} />
+
           </Route>
         </Routes>
-       <Footer />
+       {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

@@ -9,7 +9,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <AppProvider>
-    <ToastContainer autoClose={2000} hideProgressBar closeOnClick />
+    <ToastContainer
+      autoClose={2000}
+      hideProgressBar
+      closeOnClick
+      position="top-left"
+    />
     <AppRoute />
   </AppProvider>
 );
