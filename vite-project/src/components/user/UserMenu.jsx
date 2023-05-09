@@ -39,7 +39,9 @@ function UserMenu() {
           <li className="user-menu__item">
             <Link
               to={user ? "/profileUpdate" : "/login"}
-              className="user-menu__link"
+              className="user-menu__link sm:text-4xl md:text-2xl
+              border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear
+              "
             >
               Profile
             </Link>
@@ -47,7 +49,9 @@ function UserMenu() {
           <li className="user-menu__item">
             <Link
               to={user ? "/userUpdate" : "/login"}
-              className="user-menu__link"
+              className="user-menu__link sm:text-4xl md:text-2xl
+              border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear
+              "
             >
               Change Password
             </Link>
@@ -55,7 +59,8 @@ function UserMenu() {
           <li className="user-menu__item">
             <Link
               to={!user ? "/login" : ""}
-              className="user-menu__link"
+              className="user-menu__link sm:text-4xl md:text-2xl
+              border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear"
               onClick={!user ? "" : () => handleLogout()}
             >
               {user ? "Logout" : "Login"}

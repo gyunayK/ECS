@@ -79,14 +79,14 @@ const Nav = () => {
           </div>
 
           <ul
-            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#e9eff7] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 xl:mr pl-9 pr-9 transition-all duration-500 ease-out ${
+            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-transparent sm:bg-[#e9eff7] xs:bg-[#e9eff7] md:bg-transparent md:z-auto z-[-1] left-0 w-full  sm:w-screen md:w-auto md:pl-0 xl:mr pl-9 pr-9 transition-all duration-500 ease-out ${
               open ? "top-10" : "top-[-490px]"
             }`}
           >
             {links.map((link, index) => (
               <li
                 key={index}
-                className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   "
+                className="text-[#000000] md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl xs:text-2xl  "
               >
                 <a
                   href={link.link}

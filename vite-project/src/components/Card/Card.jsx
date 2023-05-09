@@ -24,8 +24,9 @@ const Card = ({ data, search, handleAddToCart }) => {
                   : data.title}
               </h1>
               <img
-                className="sm:object-cover sm:h-60 sm:w-full card-img-top md:object-cover md:h-80 md:w-full"
+                className="sm:object-cover sm:h-60 sm:w-full card-img-top md:object-contain md:h-80 md:w-full"
                 src={data.image}
+                alt={data.title}
               ></img>
               <p className="card-text">Rating: {data.rating.rate}</p>
               <button
