@@ -7,12 +7,12 @@
 .icon {
   font-size: 2.1rem;
   color: #d14545;
-  position: relative;
-  left: 30px;
+  
 }
 
 .icon:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .hamburger-menu-wrapper {
@@ -20,20 +20,19 @@
   justify-content: space-between;
 }
 
-.cart-button {
+.cart-div {
   z-index: 200;
   position: relative;
-  right: 70%;
 }
 
-.cart-button:hover {
+.cart-div:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
 
 @media only screen and (max-width: 767px) {
-  .cart-button {
+  .cart-div {
     position: fixed;
     top: 90px;
     right: 58px;

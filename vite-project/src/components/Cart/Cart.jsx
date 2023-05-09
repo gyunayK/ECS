@@ -77,13 +77,13 @@ function Cart() {
             <CartButton>Check out</CartButton>
           </div>
         </div>
-        <button className="cart-button" >
+        <div className="cart-div" >
           {!showMenu ? (
             <FaCartArrowDown className="icon" onClick={toggleMenu} />
           ) : (
             <FaWindowClose className="icon" onClick={toggleMenu} />
           )}
-        </button>
+        </div>
       </div>
     </div>
   );

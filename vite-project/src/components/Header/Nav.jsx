@@ -96,11 +96,11 @@ const Nav = () => {
                 </a>
               </li>
             ))}
-            <li className="text-[#000000] mr-4 md:ml-8 text-x1 md:my-0 my-7 flex items-center justify-center sm:text-2xl   ">
+            <li  className="px-4 py-2 border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear sm:items-center ">
               <UserMenu />
             </li>
 
-            <li>
+            <li  className="px-4 py-2 border-b-4 border-transparent hover:border-[#f48c06] duration-50  ease-linear sm:items-center ">
               <Cart />
             </li>
           </ul>
